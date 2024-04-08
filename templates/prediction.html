@@ -1,0 +1,90 @@
+<!-- prediction.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="fonteiei">
+    <h1>Prediction Result</h1>
+    {% if prediction %}
+    <h2>The predicted class is: {{ prediction }}</h2>
+    {% endif %}
+    </div>
+    <br>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="my-3">
+            <div class="card">
+                <img src="{{ url_for('static', filename='file.jpg') }}" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <button class="button"> <a href="{{ url_for('index') }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg> BACK </a> </button>
+
+</body>
+
+</html>
+<style>
+    body {
+        background-color: #F8E8EE;
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-top: 2%;
+    }
+    .card {
+        height: 100%;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 2%;
+    }
+    .fonteiei{
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  border: 5px;
+  background-color: #F7418F;
+  border-radius: 5px;
+  color: white;
+  padding-left: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 4px 2px 8px 7px rgba(233, 43, 100, 0.25);
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #81689D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #474F7A;
+}
+
+.button:hover {background-color: #81689D}
+
+.button:active {
+  background-color: #81689D;
+  box-shadow: 0 5px #474F7A;
+  transform: translateY(4px);
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+</style>
